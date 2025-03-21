@@ -98,7 +98,7 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn"];
+pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn:39216"];
 pub const RS_PUB_KEY: &str = "BggdRf9cRkBG2i50wQvXQeiJyzMKCm0lFq94GOpngSo=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
