@@ -106,13 +106,16 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rs-ny.rustdesk.com"];
-pub const RS_PUB_KEY: &str = "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=";
-
-pub const RENDEZVOUS_PORT: i32 = 21116;
-pub const RELAY_PORT: i32 = 21117;
+pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn"]; // 你的服务器地址
+pub const RS_PUB_KEY: &str = "BggdRf9cRBG2i50wVXQeiiyMKCm0lf9q4GOpngSo="; // 你的服务器公钥
+pub const RENDEZVOUS_PORT: i32 = 21116; // 你的ID端口
+pub const RELAY_PORT: i32 = 21117; // 你的中继端口
 pub const WS_RENDEZVOUS_PORT: i32 = 21118;
 pub const WS_RELAY_PORT: i32 = 21119;
+
+// 新增API相关配置（保留，无需重复定义）
+pub const API_SERVER: &str = "https://rustdesk.by.gov.cn:21119";
+pub const API_SERVER_PORT: i32 = 21119;
 
 macro_rules! serde_field_string {
     ($default_func:ident, $de_func:ident, $default_expr:expr) => {
