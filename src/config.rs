@@ -106,13 +106,13 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn:21116"]; // 对应hbbs的21116端口
+pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn"]; // 对应hbbs的21116端口
 pub const RS_PUB_KEY: &str = "XjPCxNe0TOMvv+0wWlUzwqIjzo0so405BigneRlNffA="; // 必须与服务器key.txt的公钥一致
 pub const RENDEZVOUS_PORT: i32 = 21116; // 与hbbs的21116端口一致
 pub const RELAY_PORT: i32 = 21117; // 与hbbr的21117端口一致
 pub const WS_RENDEZVOUS_PORT: i32 = 21118;
 pub const WS_RELAY_PORT: i32 = 21119;
-pub const API_SERVER: &str = "https://rustdesk.by.gov.cn:21114"; // 对应hbbs的21114端口
+pub const API_SERVER: &str = "https://rustdesk.by.gov.cn/"; // 对应hbbs的21114端口
 pub const API_SERVER_PORT: i32 = 21114; // 与hbbs的21114端口一致
 
 macro_rules! serde_field_string {
