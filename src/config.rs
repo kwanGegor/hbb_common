@@ -106,14 +106,22 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn"]; // 对应hbbs的21116端口
-pub const RS_PUB_KEY: &str = "XjPCxNe0TOMvv+0wWlUzwqIjzo0so405BigneRlNffA="; // 必须与服务器key.txt的公钥一致
-pub const RENDEZVOUS_PORT: i32 = 21116; // 与hbbs的21116端口一致
-pub const RELAY_PORT: i32 = 21117; // 与hbbr的21117端口一致
+// 对应 hbbs 的 21116 端口（ rendezvous 服务器地址，无需加端口，默认使用 RENDEZVOUS_PORT）
+pub const RENDEZVOUS_SERVERS: &[&str] = &["rustdesk.by.gov.cn"];
+// 必须与服务器 key.txt 的公钥一致（静态固化，编译后不改变）
+pub const RS_PUB_KEY: &str = "XjPCxNe0TOMvv+0wWlUzwqIjzo0so405BigneRlNffA=";
+// 与 hbbs 的 21116 端口一致（rendezvous 服务端口）
+pub const RENDEZVOUS_PORT: i32 = 21116;
+// 与 hbbr 的 21117 端口一致（中继服务端口）
+pub const RELAY_PORT: i32 = 21117;
+// WebSocket 对应的 rendezvous 端口
 pub const WS_RENDEZVOUS_PORT: i32 = 21118;
+// WebSocket 对应的中继端口
 pub const WS_RELAY_PORT: i32 = 21119;
-pub const API_SERVER: &str = "https://rustdesk.by.gov.cn/"; // 对应hbbs的21114端口
-pub const API_SERVER_PORT: i32 = 21114; // 与hbbs的21114端口一致
+// 准确配置：添加 21114 端口，对应 hbbs 的 21114 端口（API 服务器完整地址）
+pub const API_SERVER: &str = "https://rustdesk.by.gov.cn:21114";
+// 与 hbbs 的 21114 端口一致（API 服务端口，配套 API_SERVER 地址）
+pub const API_SERVER_PORT: i32 = 21114;
 
 macro_rules! serde_field_string {
     ($default_func:ident, $de_func:ident, $default_expr:expr) => {
